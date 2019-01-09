@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" value="" id="txtvalue">
+	<input type="button" value="Add" id="add" onclick="add();">
+	<input type="button" value="Display" id="display" onclick="display();">
+	<div id="result"></div>
+	<script>
+		var x = 0;
+		var array = new Array();
+		function add() {
+			array[x] = document.getElementById('txtvalue').value;
+			alert("Element " + array[x] + " Adder at index " + x);
+			x++;
+			document.getElementById('txtvalue').value = '';
+		}
+		function display() {
+			var e = '';
+			for (var i = 0; i < array.length; i++) {
+				e+= "Element " + i + " = " + array[i] + "<br/>";
+
+			}
+			document.getElementById('result').innerHTML = e;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="anh" placeholder="nhap tu">
+	<input type="button" id="viet" onclick="dictionary();" value="translate">
+	<script>
+		
+		function dictionary() {
+			var english = ["do","you","love","me"];
+			var vietnam = ["lam","ban","yeu","toi"];
+			var world = document.getElementById('anh').value;
+			var dich='';
+			for (var i = 0; i < english.length; i++) {	
+					if (world===english[i]) {
+					  	dich = vietnam[i];
+					  	alert(dich);
+					}
+			}
+			if (world==='') {
+				alert("Khong tim thay");
+			}
+		
+				
+		}
+		dictionary();
+
+		
+
+	</script>
+</body>
+</html>
